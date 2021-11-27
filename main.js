@@ -15,6 +15,8 @@ var cursor = document.querySelector("#cursor");
 
 
 function Type(){
+    console.log("onto the next sentence");
+
     var text = sentences[currentSentence].substring(0,currentIndex+1);
     element.innerHTML = text;
     currentIndex++;
@@ -30,6 +32,7 @@ function Type(){
 }
 
 function Delete(){
+    console.log("done with the sentence");
     var text = sentences[currentSentence].substring(0,currentIndex - 1);
     element.innerHTML = text;
     currentIndex--; 
@@ -43,16 +46,18 @@ function Delete(){
         else
             currentSentence++;
         
-        currentIndex = 0;
+            currentIndex = 0;
 
-        setTimeout(function(){
-            cursor.style.display = 'inline-block';
-            intervalVal = setInterval(Type, 100);
-        }, 200);
+            setTimeout(function(){
+                cursor.style.display = 'inline-block';
+                intervalVal = setInterval(Type, 200);
+            }, 1000);
     }
 }
 
-intervalVal = setInterval(Type, 100);
+intervalVal = setInterval(Type, 200);
+
+
 
 
 

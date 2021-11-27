@@ -76,6 +76,31 @@ nav > ul > a:hover{
     display: block;
 }
 
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: #E5E5E5;
+    margin-top:400px;
+    height:100px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+ 
+
+  footer > p > a{
+      text-decoration: none;
+      color:#898ea2;
+    padding: .8rem 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 16px;  
+    
+}
+
 
 /* Desktop menu */
 @media all and (min-width: 768px) {
@@ -143,6 +168,22 @@ nav > ul > a:hover{
         left:30%;
         background:none;
         border: 3px solid rgba(165, 65, 200, 0.5);
+        text-align: center; 
+    }
+
+    .box2{
+        z-index: 2;
+        width: 40%;
+        height:300px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
+        position: relative;
+        margin-top:-18%;
+        left:32%;
+        background:none;
+        border: 1px solid rgba(99, 121, 238, 0.5);        
         text-align: center; 
     }
 
