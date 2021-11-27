@@ -154,12 +154,40 @@ nav > ul > a:hover{
         line-height: 78px;
     }
 
-    .catchphrase{
-        font-family: 'Montserrat', sans-serif;
+    #container1{
+        text-align:center;
+    }
+
+    #catchphrase{
+        /* font-family: 'Montserrat', sans-serif;
         font-weight: lighter;
         font-size: 36px;
         line-height: 44px;  
-        margin-top:20px;
+        margin-top:20px; */
+        display: inline-block;
+        vertical-align:middle;
+        color: orange;
+        letter-spacing:2px;
+    }
+
+
+
+    #cursor{
+        display: inline-block;
+        vertical-align: middle;
+        width: 3px;
+        height:30px;
+        background-color:#FF922E;
+        animation: blink .75s step-end infinite; 
+    }
+
+    @keyframes blink{
+        from, to{
+            background-color: transparent
+        }
+        50%{
+            background-color: #FF922E;
+        }
     }
 
     button{
