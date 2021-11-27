@@ -12,28 +12,35 @@ nav ul{
     padding: 0;
 }
 nav ul a {
-    color: black;
+    color:#898ea2;
     text-decoration: none;
     padding: .8rem 1rem;
     display:block;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 18px;  
 }
 
-nav div:first-child a{
+nav > div {
+    padding-top:35px;
+}
+nav > div > a{
     line-height: 0;
     text-align: center;
 }
 
-nav div:first-child h1, nav ul{
-    margin:0;
-}
-
-
-
 
 
 .logo {
-    font-size: 20px;
     padding: 7.5px 10px 7.5px 0;
+    text-decoration: none;
+    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: lighter;
+    color: #898ea2
+
 }
 .nav-item {
     padding: 10px;
@@ -41,6 +48,16 @@ nav div:first-child h1, nav ul{
     width: 100%;
     text-align: center;
     display: none;
+}
+
+/* highlight top-menu item when mouse is over it */
+nav > div > a:hover {
+    color: #FF922E;
+    font-weight: normal;
+  }
+nav > ul > a:hover{
+    color:#FF922E;
+    font-weight: normal;
 }
 
 /* Mobile menu */
@@ -74,8 +91,9 @@ nav div:first-child h1, nav ul{
 
     }
 
-    nav div a{
-        padding-top:10px;
+    nav > div {
+        padding-top:35px;
+        padding-left: 20px;
     }
 
    
@@ -91,6 +109,13 @@ nav div:first-child h1, nav ul{
     }
     .logo {
         order: 0;
+        text-decoration: none;
+        color: #898ea2;
+        font-size: 36px;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: lighter;
+
 
         /* margin: 5px 20px; */
     }
@@ -103,4 +128,53 @@ nav div:first-child h1, nav ul{
         margin: 20px;
 
     }
-}
+
+
+    /* done with nav bar */
+
+    .box1{
+        width: 40%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
+        position: relative;
+        margin-top:5%;
+        left:30%;
+        background:none;
+        border: 3px solid rgba(165, 65, 200, 0.5);
+        text-align: center; 
+    }
+
+    h1{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 48px;
+        color:#A541C8;
+        font-weight:bold;
+        line-height: 78px;
+    }
+
+    .catchphrase{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: lighter;
+        font-size: 36px;
+        line-height: 44px;  
+        margin-top:20px;
+    }
+
+    button{
+        background-color: #FF922E;
+        width:160px;
+        height: 60px;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 24px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: lighter;
+        margin-top:40px;
+
+    }
+
+    }
+
+    
