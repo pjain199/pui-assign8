@@ -1,69 +1,52 @@
-var sentences = [
-    "My passion is design",
-    "My passion is artificial intelligence",
-    "My passion is product creation",
-    "My passion is psychology"
-];
+const textDisplay = document.getElementById('catchphrase')
+const sentences = ['My passion is product creation', 'My passion is design', 'My passion is artificial intelligence', 'My passion is psychology']
+let i = 0
+let j= 0 
+let currentSentence =[]
+let isDeleting= false
+let atEnd= false
 
-var currentSentence = 0;
-var currentIndex = 0;
-var intervalVal;
-var element = document.querySelector("#catchphrase");
-var cursor = document.querySelector("#cursor");
+function loop () {
+  atEnd = false
 
-function Type(){
-    console.log("onto the next sentence");
+  textDisplay.innerHTML= currentSentence.join('')
 
-    var text = sentences[currentSentence].substring(0,currentIndex+1);
-    element.innerHTML = text;
-    currentIndex++;
+  if (i < sentences.length) {
 
-    if(text === sentences[currentSentence]){
-        cursor.style.display = 'none';
+    if (!isDeleting && j <= sentences[i].length) {
+      currentSentence.push(sentences[i][j])
+      j++
 
-        clearInterval(intervalVal);
-        setTimeout(function(){
-
-            intervalVal = setInterval(Delete, 50);
-
-        },1000);
+      textDisplay.innerHTML= currentSentence.join('')
     }
+
+    if(isDeleting && j <= sentences[i].length) {
+      currentSentence.pop(sentences[i][j])
+      j--
+
+      textDisplay.innerHTML = currentSentence.join('')
+    }
+
+    if (j == sentences[i].length) {
+      atEnd = true
+      isDeleting =true
+    }
+
+    if (isDeleting && j === 0) {
+      currentSentence = []
+      isDeleting =false
+      i++
+      if (i === sentences.length) {
+        i = 0
+      }
+    }
+  }
+  const spedUp = Math.random() * (80 -50) + 50
+  const normalSpeed = Math.random() * (300 -200) + 50
+  const time = atEnd ? 2000 : isDeleting ? spedUp : normalSpeed
+  setTimeout(loop, time)
 }
 
-// let helper = (currentSentence) => {
-//     let iTextNext = (currentSentence + 1) % sentences.length;
-//     // let text = sentences[iTextNext];
-//     setTimeout(() => {
-//       Type();
-//       helper(iTextNext);
-//     }, 1000);
-//   };
-  
-//   helper(0);
+loop()
 
-function Delete(){
-    console.log("done with the sentence");
-    var text = sentences[currentSentence].substring(0,currentIndex - 1);
-    element.innerHTML = text;
-    currentIndex--; 
-
-    if(text === ''){
-        clearInterval(intervalVal);
-
-        if(currentSentence == (sentences.length - 1))
-            currentSentence = 0;
-        
-        else
-            currentSentence++;
-        
-            currentIndex = 0;
-
-            setTimeout(function(){
-                cursor.style.display = 'inline-block';
-                intervalVal = setInterval(Type, 100);
-            }, 200);
-    }
-}
-
-intervalVal = setInterval(Type, 100);
 
