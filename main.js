@@ -11,9 +11,6 @@ var intervalVal;
 var element = document.querySelector("#catchphrase");
 var cursor = document.querySelector("#cursor");
 
-
-
-
 function Type(){
     console.log("onto the next sentence");
 
@@ -26,10 +23,23 @@ function Type(){
 
         clearInterval(intervalVal);
         setTimeout(function(){
+
             intervalVal = setInterval(Delete, 50);
+
         },1000);
     }
 }
+
+// let helper = (currentSentence) => {
+//     let iTextNext = (currentSentence + 1) % sentences.length;
+//     // let text = sentences[iTextNext];
+//     setTimeout(() => {
+//       Type();
+//       helper(iTextNext);
+//     }, 1000);
+//   };
+  
+//   helper(0);
 
 function Delete(){
     console.log("done with the sentence");
@@ -50,15 +60,10 @@ function Delete(){
 
             setTimeout(function(){
                 cursor.style.display = 'inline-block';
-                intervalVal = setInterval(Type, 200);
-            }, 1000);
+                intervalVal = setInterval(Type, 100);
+            }, 200);
     }
 }
 
-intervalVal = setInterval(Type, 200);
-
-
-
-
-
+intervalVal = setInterval(Type, 100);
 

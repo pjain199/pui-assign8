@@ -32,7 +32,7 @@ nav > div > a{
 
 
 
-.logo {
+.d-flex {
     padding: 7.5px 10px 7.5px 0;
     text-decoration: none;
     font-size: 36px;
@@ -42,7 +42,7 @@ nav > div > a{
     color: #898ea2
 
 }
-.nav-item {
+.p-2 {
     padding: 10px;
     order: 3;
     width: 100%;
@@ -61,15 +61,14 @@ nav > ul > a:hover{
 }
 
 /* Mobile menu */
-.container {
-    display: flex;
+.d-flex {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
-.container a {
+.d-flex a {
     display: block;
-    padding: 15px 5px;
+    /* padding: 15px 5px; */
 }
 
 .active .nav-item {
@@ -82,15 +81,18 @@ footer {
     background-color: #E5E5E5;
     margin-bottom:0px;
     height:100px;
-    display:flex;
+    /* display:flex; */
     flex-direction: row;
     align-items: center;
     justify-content: center;
   }
 
- 
+ /* footer > div > p > a{
+     margin-right: 10px;
+     margin-left:20px;
+ } */
 
-  footer > p > a{
+  footer >div> p > a{
       text-decoration: none;
       color:#898ea2;
     padding: .8rem 1rem;
@@ -219,7 +221,7 @@ a{
     }
 
    
-    .container {
+    /* .container {
         display: flex;
         flex-direction: row;
         align-items: right;     
@@ -228,8 +230,8 @@ a{
         justify-content: space-between;
         margin-left: auto;
     
-    }
-    .logo {
+    } */
+    .d-flex {
         order: 0;
         text-decoration: none;
         color: #898ea2;
@@ -241,8 +243,7 @@ a{
 
         /* margin: 5px 20px; */
     }
-    .nav-item {
-        display: flex;
+    .d-flex > .p-2 {
         order: 1;
         position: relative;
         display: block; 
