@@ -80,7 +80,7 @@ footer {
     text-align: center;
     padding: 3px;
     background-color: #E5E5E5;
-    margin-bottom:0px;
+    margin-top:300px;
     height:100px;
     /* display:flex; */
     flex-direction: row;
@@ -265,6 +265,23 @@ a{
     padding-top: 20px;
 }
 
+/* about page */
+
+
+.album > .d-flex > img{
+    width: 15%;
+    height:15%;
+    margin-left: 80px;
+}
+
+.album > .d-flex > p{
+    width:50%;
+    font-size: 18px;
+    margin-right:60px;
+}
+
+
+
 
 
 
@@ -402,6 +419,17 @@ a{
         -ms-flex: 0 0 33.333333%;
         flex: 0 0 33.333333%;
         max-width: 33.333333%;
+    }
+
+    .row > img{
+        width: 20%;
+        height:20%;
+        margin-left: 60px;
+        height: auto;
+    }
+
+    .album > .d-flex{
+        justify-content: space-around;
     }
 
 
