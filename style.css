@@ -256,8 +256,8 @@ a{
 }
 
 .text{
-    padding-left: 190px;
-    padding-right:190px;
+    padding-left: 20px;
+    padding-right:20px;
     padding-top: 10px;
     font-family: 'Sofia Pro';
     font-size: 18px;
@@ -265,8 +265,8 @@ a{
 }
 
 .page-container > img{
-    width: 750px;
-    height:450px;
+    width: 300px;
+    height:300px;
     padding-top: 20px;
 }
 
@@ -435,6 +435,43 @@ a{
 
     .album > .d-flex{
         justify-content: space-around;
+    }
+
+    /* project1 */
+
+    .title{
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 36px;
+        color:#A541C8;
+        font-weight:lighter;
+        line-height: 78px;
+        padding-top: 20px;
+    }
+    
+    .page-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom:60px;
+        
+    }
+    
+    .text{
+        padding-left: 190px;
+        padding-right:190px;
+        padding-top: 10px;
+        font-family: 'Sofia Pro';
+        font-size: 18px;
+        line-height: 39px;
+    }
+    
+    .page-container > img{
+        width: 750px;
+        height:450px;
+        padding-top: 20px;
     }
 
 
