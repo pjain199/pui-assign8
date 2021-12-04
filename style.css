@@ -8,11 +8,11 @@ body,html {
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
 }
-nav ul{
+nav div{
     background: white;
     padding: 0;
 }
-nav ul a {
+nav div a {
     color:#898ea2;
     text-decoration: none;
     padding: .8rem 1rem;
@@ -21,6 +21,7 @@ nav ul a {
     font-style: normal;
     font-weight: lighter;
     font-size: 18px;  
+    margin-bottom: 14px;
 }
 
 nav > div {
@@ -56,9 +57,13 @@ nav > div > a:hover {
     color: #FF922E;
     font-weight: normal;
   }
-nav > ul > a:hover{
+nav > div > a:hover{
     color:#FF922E;
     font-weight: normal;
+}
+
+button:hover{
+    background-color:#fab06b;
 }
 
 /* Mobile menu */
@@ -219,7 +224,7 @@ a{
 }
 
 .project-intro{
-    font-family: "Sofia Pro" sans-serif;
+    font-family: 'Sofia Pro';
     font-style: normal;
     font-weight: lighter;
     font-size: 16px;
@@ -294,7 +299,7 @@ a{
         margin-top: 10px;
     }
 
-    nav ul{
+    nav div{
         display: flex;
         align-items: center;
 
